@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="Pane" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FXMLDocumentController">
+   <children>
+      <Button fx:id="sil" layoutX="174.0" layoutY="288.0" mnemonicParsing="false" onAction="#tablesil" prefHeight="25.0" prefWidth="65.0" text="Sil" />
+      <Button fx:id="guncelle" layoutX="239.0" layoutY="288.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="25.0" prefWidth="65.0" text="Güncelle" />
+      <Button fx:id="sorgula" layoutX="304.0" layoutY="288.0" mnemonicParsing="false" onAction="#sorgula" prefHeight="25.0" prefWidth="65.0" text="Sorgula" />
+      <Label layoutX="43.0" layoutY="68.0" prefHeight="17.0" prefWidth="53.0" text="Ateş" />
+      <Slider fx:id="atesSlider" layoutX="95.0" layoutY="66.0" majorTickUnit="5.0" max="43.7" min="21.0" onMouseClicked="#atesiGuncelle" onMouseDragged="#atesiGuncelle" showTickLabels="true" showTickMarks="true" value="39.0" />
+      <Label id="ates" fx:id="ates" layoutX="249.0" layoutY="69.0" text="39" />
+      <CheckBox fx:id="teshis" layoutX="45.0" layoutY="108.0" mnemonicParsing="false" text="Teşhis var mı" />
+      <ComboBox fx:id="memleketi" layoutX="135.0" layoutY="137.0" prefWidth="150.0" />
+      <Label layoutX="45.0" layoutY="141.0" text="Memleketi" />
+      <Label layoutX="47.0" layoutY="192.0" text="Cinsiyeti" />
+      <RadioButton fx:id="erkek" layoutX="127.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#cinsiyetguncelle" text="Erkek" />
+      <RadioButton fx:id="kadin" layoutX="201.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#cinsiyetguncelle" text="Kadın" />
+      <Label layoutX="52.0" layoutY="228.0" text="Mesleği" />
+      <RadioButton fx:id="isci" layoutX="127.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#meslegiguncelle" text="İşçi" />
+      <RadioButton fx:id="memur" layoutX="189.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#meslegiguncelle" text="Memur" />
+      <RadioButton fx:id="emekli" layoutX="278.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#meslegiguncelle" text="Emekli" />
+      <RadioButton fx:id="ogrenci" layoutX="360.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#meslegiguncelle" text="Öğrenci" />
+      <TextField fx:id="hastaadi" layoutX="103.0" layoutY="31.0" />
+      <Label layoutX="43.0" layoutY="35.0" text="Adı" />
+      <Button fx:id="ekle" layoutX="109.0" layoutY="288.0" mnemonicParsing="false" onAction="#tableekle" prefHeight="25.0" prefWidth="65.0" text="Ekle" />
+      <TableView fx:id="table" layoutX="43.0" layoutY="365.0" onMousePressed="#guncelkisi" prefHeight="221.0" prefWidth="392.0">
+        <columns>
+          <TableColumn fx:id="columnHastaadi" prefWidth="65.0" text="Hasta Adı" />
+            <TableColumn fx:id="columnMemleketi" prefWidth="65.0" text="Memleketi" />
+          <TableColumn fx:id="columnMeslek" prefWidth="65.0" text="Meslek" />
+            <TableColumn fx:id="columnCinsiyet" prefWidth="65.0" text="Cinsiyet" />
+            <TableColumn fx:id="columnAtes" prefWidth="65.0" text="Ateş" />
+            <TableColumn fx:id="columnTeshis" prefWidth="65.0" text="Teşhis" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
